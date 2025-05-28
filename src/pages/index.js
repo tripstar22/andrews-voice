@@ -5,10 +5,12 @@ import Head from 'next/head';
 
 // const inter = Inter({ subsets: ["latin"] });
 
+// * third party library imports *
+import PropTypes from 'prop-types';
 import { gql } from '@apollo/client';
 import client from '../lib/apolloClient';
 
-import Sample from '@/components/sample';
+import Sample from '../components/sample';
 
 export async function getStaticProps() {
   const { data } = await client.query({
@@ -24,8 +26,6 @@ export async function getStaticProps() {
       }
     `,
   });
-
-  console.log('sample data:', JSON.stringify(data, null, 2));
 
   return {
     props: {
@@ -50,3 +50,7 @@ export default function Home({ samples }) {
     </>
   );
 }
+
+Home.propTypes = {
+  samples: PropTypes.array.isRequired,
+};

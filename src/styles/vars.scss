@@ -1,0 +1,27 @@
+/*
+  # vars #
+*/
+
+// * colors *
+$black: #000000;
+$white: #FFFFFF;
+
+
+// * screen sizes *
+$screen-sm: 600px;
+$screen-md: 900px;
+$screen-lg: 1200px;
+$screen-xl: 1536px;
+
+
+// * z-index values *
+$zIndexAppLoader: 1000; // * Above highest know z-index in Bootstrap styles which is X for the XYZ *
+
+
+// * miscellaneous default values *
+// $blurDefault: blur(40px);
+// $borderDefault: 3px solid $black;
+// $boxShadowDefault: 4px 4px 15px 0px rgba($black, 0.75);
+// $filterDefault: grayscale(100%) opacity(0.75);
+// $opacityDefault: 0.75;
+$transitionDefault: 0.25s ease-in-out;
