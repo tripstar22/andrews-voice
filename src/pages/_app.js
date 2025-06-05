@@ -8,7 +8,9 @@ export default function App(props) {
 
   return (
     <main className={fontSansSerifDefault.className}>
-      <Component pageProp={pageProps} />
+      {/* props spreading required for Next.js to work correctly */
+      /* eslint-disable-next-line react/jsx-props-no-spreading */}
+      <Component {...pageProps} />
     </main>
   );
 }
